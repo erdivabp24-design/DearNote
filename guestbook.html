@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Cerita | Buku Tamu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">Ruang<span>Cerita.</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="guestbook.html">Buku Tamu</a>
+  </nav>
+</header>
+
+<main class="wrap page">
+  <p class="eyebrow">TINGGALKAN PESAN</p>
+  <h1>Buku <span>Tamu.</span></h1>
+
+  <p class="lead narrow">
+    Tulis pesan singkatmu di bawah ini.
+    Terima kasih sudah berkunjung!
+  </p>
+
+  <div class="guest-layout">
+
+    <form id="guestForm" class="form-card">
+
+      <label for="visitorName">Nama</label>
+      <input id="visitorName" type="text"
+        maxlength="60" placeholder="Masukkan nama kamu" required>
+
+      <label for="visitorMessage">Pesan</label>
+      <textarea id="visitorMessage" rows="4"
+        maxlength="500" placeholder="Tuliskan pesanmu..." required></textarea>
+
+      <button class="btn" type="submit">
+        Kirim Pesan →
+      </button>
+
+      <p id="formStatus" class="status"></p>
+    </form>
+
+    <section class="messages">
+      <div class="messages-head">
+        <h2>Pesan Pengunjung</h2>
+        <button id="refreshBtn" class="refresh" type="button">↻</button>
+      </div>
+
+      <div id="messageList">
+        <p class="empty">Memuat pesan...</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>© 2026 Ruang Cerita · Buku Tamu Online</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/guestbook.js"></script>
+
+</body>
+</html>
